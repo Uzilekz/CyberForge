@@ -4,21 +4,22 @@ Como projecto final del curso de Javascript de Coderhouse, he creado una tienda 
 
 ## Tabla de Contenidos
 
+-   [CyberForge](#cyberforge)
     -   [Tabla de Contenidos](#tabla-de-contenidos)
     -   [Características](#características)
-    -   [Requisitos:](#requisitos)
+    -   [Requisitos](#requisitos)
     -   [Instalación](#instalación)
 
 ## Características
 
-    -   Simulación de carrito de compras.
-    -   Catálogo de componentes para PC.
-    -   Agregar/eliminar elementos del carrito.
-    -   Calcular el total del carrito.
+-   Simulación de carrito de compras.
+-   Catálogo de componentes para PC.
+-   Agregar/eliminar elementos del carrito.
+-   Calcular el total del carrito.
 
 ## Requisitos
 
-    -   Navegador web moderno.
+-   Navegador web moderno.
 
 ## Instalación
 
