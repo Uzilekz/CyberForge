@@ -23,8 +23,6 @@ Como projecto final del curso de Javascript de Coderhouse, he creado una tienda 
 
 ## Instalación
 
-Clonación del repositorio:
-
 ```bash
 git clone https://github.com/Uzilekz/CyberForge.git
 cd CyberForge
