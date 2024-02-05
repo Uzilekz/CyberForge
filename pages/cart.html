@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CyberForge | Carrito</title>
+        <!--Favicon-->
+        <link
+            rel="shortcut icon"
+            href="../img/logo/logo.ico"
+            type="image/x-icon"
+        />
+        <!--CDN FontAwesome-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/normalize.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!--Aside-->
+            <aside>
+                <!--Header-->
+                <header>
+                    <!--Logo-->
+                    <div class="logo">
+                        <!--Icon-->
+                        <img
+                            class="logo__img"
+                            src="../img/logo/logo.webp"
+                            alt="Portatil con pantalla verde"
+                        />
+                        <!--Name-->
+                        <h1 class="logo__text">CyberForge</h1>
+                    </div>
+                </header>
+                <!--Nav-->
+                <nav>
+                    <ul>
+                        <li>
+                            <a
+                                class="nav__goShop button-menu"
+                                href="../index.html"
+                                ><i class="fa-solid fa-arrow-rotate-left"></i>
+                                Seguir comprando</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav__cart button-menu active"
+                                href="cart.html"
+                                ><i class="fa-solid fa-cart-shopping"></i>
+                                Carrito</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <!--Footer-->
+                <footer>
+                    <div class="footer__txt">
+                        <span>Hecho con </span>
+                        <div class="love">
+                            <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 92 72"
+                                enable-background="new 0 0 92 72"
+                                xml:space="preserve"
+                                aria-labelledby="heartTitle"
+                                role="img"
+                            >
+                                <title id="heartTitle">
+                                    Un corazon lleno de amor.
+                                </title>
+                                <path
+                                    fill="#ff005d"
+                                    d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0 c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <span
+                            >por
+                            <a
+                                href="https://uzilekz.github.io/Portafolio/"
+                                target="_blank"
+                                >@Uzilekz</a
+                            ></span
+                        >
+                    </div>
+                </footer>
+            </aside>
+            <!--Main-->
+            <main>
+                <h2 class="principal-title">Carrito</h2>
+                <!--Cart-->
+                <div class="cart-container">
+                    <!--Cart empty-->
+                    <p class="cart-empty">
+                        El carrito está vacío.
+                        <i class="fa-solid fa-heart-crack"></i>
+                    </p>
+                    <!--Cart with products-->
+                    <div class="cart-products">
+                        <div class="cart-products__product">
+                            <img
+                                src="../img/products/almacenamiento/SSD/DiscoSolidoInternoKingston500GB.webp"
+                                alt=""
+                            />
+                            <div class="cart-products__product__name">
+                                <small>Nombre</small>
+                                <h3>SSD Kingston 500GB</h3>
+                            </div>
+                            <div class="cart-products__product__quantity">
+                                <small>Cantidad</small>
+                                <p>2</p>
+                            </div>
+                            <div class="cart-products__product__price">
+                                <small>Precio</small>
+                                <p>$75</p>
+                            </div>
+                            <div class="cart-products__product__subtotal">
+                                <small>Subtotal</small>
+                                <p>$150</p>
+                            </div>
+                            <button class="cart-products__product__delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                        <div class="cart-products__product">
+                            <img
+                                src="../img/products/memoriaRam/MemoriaKingstonFuryRgb8gbDdr4.webp"
+                                alt=""
+                            />
+                            <div class="cart-products__product__name">
+                                <small>Nombre</small>
+                                <h3>Memoria RAM Kingston 8gb Ddr4</h3>
+                            </div>
+                            <div class="cart-products__product__quantity">
+                                <small>Cantidad</small>
+                                <p>3</p>
+                            </div>
+                            <div class="cart-products__product__price">
+                                <small>Precio</small>
+                                <p>$25</p>
+                            </div>
+                            <div class="cart-products__product__subtotal">
+                                <small>Subtotal</small>
+                                <p>$75</p>
+                            </div>
+                            <button class="cart-products__product__delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!--Cart actions-->
+                    <div class="cart-actions">
+                        <div class="cart-actions__left">
+                            <button class="cart-actions__left__delete-cart">
+                                Vaciar carrito
+                            </button>
+                        </div>
+                        <div class="cart-actions__right">
+                            <div class="cart-actions__right__total">
+                                <p>Total:</p>
+                                <p id="total">$225</p>
+                            </div>
+                            <button class="cart-actions__right__buy">
+                                Comprar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="../js/cart.js"></script>
+    </body>
+</html>

@@ -1,3 +1,224 @@
-body {
-    background-color: brown;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --color-principal: #462fa1;
+    --color-principal-light: #b19eff;
+    --color-white: #ececec;
+    --color-gray: #e2e2e2;
+    --color-red: #a01010;
+}
+
+::selection {
+    color: #00e279;
+    background: rgba(37, 36, 36, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", "sans-serif";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*CONTAINER*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--color-principal);
+}
+
+/*ASIDE*/
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    color: var(--color-white);
+    padding: 2rem;
+    height: 100vh;
+    top: 0;
+}
+
+/*ASIDE__LOGO*/
+
+.logo {
+    display: inline-block;
+    color: var(--color-white);
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 3.5em;
+}
+
+.logo__text {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    align-items: center;
+}
+
+.footer__txt {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: var(--color-principal-light);
+}
+
+/*FOOTER__HEART*/
+.love {
+    padding: 0 0.4rem;
+    animation: 1.5s heartThrob infinite;
+}
+.love svg {
+    height: 1.5rem;
+}
+
+@keyframes heartThrob {
+    10% {
+        transform: scale(1.15);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.15);
+    }
+    60% {
+        transform: scale(1);
+    }
+}
+
+/*FOOTER__LINK*/
+footer a {
+    position: relative;
+    color: #54ff60;
+}
+
+footer a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #54ff60;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+footer a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*MAIN*/
+main {
+    background-color: var(--color-white);
+    margin: 1em;
+    margin-left: 0;
+    border-radius: 2em;
+    padding: 3em;
+}
+
+.principal-title {
+    color: var(--color-principal);
+    margin-bottom: 2em;
+}
+
+/*CONTAINER__PRODUCTS*/
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+/*PRODUCT*/
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(233, 233, 233, 0.8) -6px -2px 16px 0px;
+}
+
+/*PRODUCT__IMG*/
+.product__img {
+    width: 100%;
+    height: 15em;
+    padding: 1em;
+    border-radius: 1em 1em 0 0;
+    object-fit: contain;
+}
+
+/*PRODUCT__DESCRIPCTION*/
+.product__description {
+    display: flex;
+    flex-direction: column;
+
+    height: 8em;
+    background-color: var(--color-principal);
+    padding: 0.5em;
+    border-radius: 0 0 1em 1em;
+    color: var(--color-white);
+}
+
+.product__description__name {
+    font-size: 1em;
+}
+
+.product__description__price {
+    position: absolute;
+    bottom: 135px;
+    font-weight: 500;
+    color: #000;
+    background-color: #00e278b4;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.product__description__add {
+    position: absolute;
+    bottom: 10px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 0.75em;
+    color: var(--color-principal);
+    padding: 0.3em;
+    width: 94%;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.product__description__add:hover {
+    background-color: #54ff60;
+    color: #000;
+    border: 2px solid #54ff60;
 }
