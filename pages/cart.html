@@ -29,16 +29,18 @@
                 <!--Header-->
                 <header>
                     <!--Logo-->
-                    <div class="logo">
-                        <!--Icon-->
-                        <img
-                            class="logo__img"
-                            src="../img/logo/logo.webp"
-                            alt="Portatil con pantalla verde"
-                        />
-                        <!--Name-->
-                        <h1 class="logo__text">CyberForge</h1>
-                    </div>
+                    <a class="logo" href="../index.html">
+                        <div class="logo__container">
+                            <!--Icon-->
+                            <img
+                                class="logo__img"
+                                src="../img/logo/logo.webp"
+                                alt="Portatil con pantalla verde"
+                            />
+                            <!--Name-->
+                            <h1 class="logo__text">CyberForge</h1>
+                        </div>
+                    </a>
                 </header>
                 <!--Nav-->
                 <nav>
@@ -53,7 +55,7 @@
                         </li>
                         <li>
                             <a
-                                class="nav__cart button-menu active"
+                                class="nav-menu__cart button-menu active"
                                 href="cart.html"
                                 ><i class="fa-solid fa-cart-shopping"></i>
                                 Carrito</a
@@ -102,7 +104,7 @@
                 <!--Cart-->
                 <div class="cart-container">
                     <!--Cart empty-->
-                    <p class="cart-empty">
+                    <p class="cart-empty disabled">
                         El carrito está vacío.
                         <i class="fa-solid fa-heart-crack"></i>
                     </p>
@@ -110,6 +112,7 @@
                     <div class="cart-products">
                         <div class="cart-products__product">
                             <img
+                                class="cart-products__product__img"
                                 src="../img/products/almacenamiento/SSD/DiscoSolidoInternoKingston500GB.webp"
                                 alt=""
                             />
@@ -135,6 +138,7 @@
                         </div>
                         <div class="cart-products__product">
                             <img
+                                class="cart-products__product__img"
                                 src="../img/products/memoriaRam/MemoriaKingstonFuryRgb8gbDdr4.webp"
                                 alt=""
                             />
@@ -160,7 +164,7 @@
                         </div>
                     </div>
                     <!--Cart actions-->
-                    <div class="cart-actions">
+                    <div class="cart-actions disabled">
                         <div class="cart-actions__left">
                             <button class="cart-actions__left__delete-cart">
                                 Vaciar carrito
@@ -176,6 +180,11 @@
                             </button>
                         </div>
                     </div>
+                    <!--Cart buyed-->
+                    <p class="cart-buyed disabled">
+                        Muchas gracias por su compra.
+                        <i class="fa-solid fa-heart"></i>
+                    </p>
                 </div>
             </main>
         </div>

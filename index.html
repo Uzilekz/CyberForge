@@ -44,46 +44,46 @@
                 </header>
                 <!--Nav-->
                 <nav>
-                    <ul>
+                    <ul class="nav-menu">
                         <li>
-                            <button class="nav__button-menu button-menu active">
+                            <button id="todos" class="nav-menu__button button-menu active">
                                 <i class="fa-solid fa-hand-point-up"></i>
                                 Todos los productos
                             </button>
                         </li>
                         <li>
-                            <button class="nav__button-menu button-menu">
+                            <button id="placasMadre" class="nav-menu__button button-menu">
                                 <i class="fa-regular fa-hand-point-up"></i>
                                 Placa Madre
                             </button>
                         </li>
                         <li>
-                            <button class="nav__button-menu button-menu">
+                            <button id="procesadores" class="nav-menu__button button-menu">
                                 <i class="fa-regular fa-hand-point-up"></i>
-                                Procesadores
+                                Procesador
                             </button>
                         </li>
                         <li>
-                            <button class="nav__button-menu button-menu">
+                            <button id="tarjetasGraficas" class="nav-menu__button button-menu">
                                 <i class="fa-regular fa-hand-point-up"></i>
                                 Tarjeta Grafica
                             </button>
                         </li>
                         <li>
-                            <button class="nav__button-menu button-menu">
+                            <button id="memoriasRAM" class="nav-menu__button button-menu">
                                 <i class="fa-regular fa-hand-point-up"></i>
                                 Memoria RAM
                             </button>
                         </li>
                         <li>
-                            <button class="nav__button-menu button-menu">
+                            <button id="almacenamientos" class="nav-menu__button button-menu">
                                 <i class="fa-regular fa-hand-point-up"></i>
                                 Almacenamiento
                             </button>
                         </li>
                         <li>
                             <a
-                                class="nav__cart button-menu"
+                                class="nav-menu__cart button-menu"
                                 href="./pages/cart.html"
                                 ><i class="fa-solid fa-cart-shopping"></i>
                                 Carrito <span class="cart-number">0</span></a
@@ -130,365 +130,8 @@
             <main>
                 <h2 class="principal-title">Todos los productos</h2>
                 <!--Products-->
-                <div class="products-container">
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/placaMadre/MotherboardAsusPrimeA320m-k.webp"
-                            alt="Placa Madre"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Motherboard Asus Prime A320m-k
-                            </h3>
-                            <p class="product__description__price">$150</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/placaMadre/MotherboardAsusPrimeA520m-aIi.webp"
-                            alt="Placa Madre"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Motherboard Asus Prime A520m-a Ii
-                            </h3>
-                            <p class="product__description__price">$200</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/placaMadre/MotherboardAm4GigabyteB450mDs3h.webp"
-                            alt="Placa Madre"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Motherboard Am4 Gigabyte B450m Ds3h
-                            </h3>
-                            <p class="product__description__price">$300</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/INTEL/ProcesadorIntelCorei3-10100F.webp"
-                            alt="Procesador Intel"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador Intel Core i3-10100F
-                            </h3>
-                            <p class="product__description__price">$80</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/INTEL/ProcesadorIntelCorei5-10400.webp"
-                            alt="Procesador Intel"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador Intel Core i5-10400
-                            </h3>
-                            <p class="product__description__price">$145</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/INTEL/ProcesadorIntelCorei7-10700.webp"
-                            alt="Procesador Intel"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador Intel Core i7-10700
-                            </h3>
-                            <p class="product__description__price">$250</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/AMD/ProcesadorAMDRyzen33200G.webp"
-                            alt="Procesador AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador AMD Ryzen 3 3200G
-                            </h3>
-                            <p class="product__description__price">$110</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/AMD/ProcesadorAMDRyzen55600X.webp"
-                            alt="Procesador AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador AMD Ryzen5 5600X
-                            </h3>
-                            <p class="product__description__price">$175</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/procesador/AMD/ProcesadorAMDRyzen75700G.webp"
-                            alt="Procesador AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Procesador AMD Ryzen 7 5700G
-                            </h3>
-                            <p class="product__description__price">$250</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/NVIDIA/PlacaDeVideoNvidiaGigabyteGeForce10SeriesGT10302GB.webp"
-                            alt="Tarjeta de video NVIDIA"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video Nvidia Gigabyte GeForce 10 Series
-                                GT1030 2GB
-                            </h3>
-                            <p class="product__description__price">$125</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/NVIDIA/PlacaDeVideoNvidiaEvgaKOGamingGeForceRTX20SeriesRTX20606GB.webp"
-                            alt="Tarjeta de video NVIDIA"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video Nvidia Evga KO Gaming GeForce RTX
-                                20 Series RTX2060 6GB
-                            </h3>
-                            <p class="product__description__price">$250</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/NVIDIA/PlacaDeVideoNvidiaGeForceRTX30SeriesRTX309024GB.webp"
-                            alt="Tarjeta de video NVIDIA"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video Nvidia GeForce RTX 30 Series
-                                RTX3090 24GB
-                            </h3>
-                            <p class="product__description__price">$500</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/AMD/PlacaDeVideoAMDAfoxRadeonRX500SeriesRX5808GB.webp"
-                            alt="Tarjeta de video AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video AMD Afox Radeon RX500 Series
-                                RX580 8GB
-                            </h3>
-                            <p class="product__description__price">$150</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/AMD/PlacaDeVideoAMDSapphirePulseRadeonRX6700SeriesRX6700XT12GB.webp"
-                            alt="Tarjeta de video AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video AMD Radeon RX6700 Series RX6700XT
-                                12GB
-                            </h3>
-                            <p class="product__description__price">$300</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/tarjetaGrafica/AMD/PlacaDeVideoRadeonRX6900XT16gbFoundersEdition.webp"
-                            alt="Tarjeta de video AMD"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Placa De Video Radeon RX6900XT 16gb Founders
-                                Edition
-                            </h3>
-                            <p class="product__description__price">$500</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/memoriaRam/MemoriaKingstonFuryRgb8gbDdr4.webp"
-                            alt="Memoria RAM"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Memoria Kingston Fury Rgb 8gb Ddr4
-                            </h3>
-                            <p class="product__description__price">$50</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/memoriaRam/MemoriaKingstonFury16gbDdr4.webp"
-                            alt="Memoria RAM"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Memoria Kingston Fury 16gb Ddr4
-                            </h3>
-                            <p class="product__description__price">$100</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/memoriaRam/MemoriaKingstonFuryRenegadeRgb32gbDdr4.webp"
-                            alt="Memoria RAM"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Memoria Kingston Fury Renegade Rgb 32gb Ddr4
-                            </h3>
-                            <p class="product__description__price">$175</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/almacenamiento/HDD/DiscoDuroInternoSeagate1TB.webp"
-                            alt="Disco duro Seagate"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Disco Duro Interno Seagate 1TB
-                            </h3>
-                            <p class="product__description__price">$50</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/almacenamiento/HDD/DiscoDuroInternoWesternDigital2TB.webp"
-                            alt="Disco Duro Western Digital"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Disco Duro Interno Western Digital 2TB
-                            </h3>
-                            <p class="product__description__price">$75</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/almacenamiento/SSD/DiscoSolidoInternoKingston500GB.webp"
-                            alt="Disco Solido Kingston"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Disco Solido Interno Kingston 500GB
-                            </h3>
-                            <p class="product__description__price">$75</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img
-                            class="product__img"
-                            src="./img/products/almacenamiento/SSD/DiscoSolidoInternoKingston960GB.webp"
-                            alt="Disco Solido Kingston"
-                        />
-                        <div class="product__description">
-                            <h3 class="product__description__name">
-                                Disco Solido Interno Kingston 960GB
-                            </h3>
-                            <p class="product__description__price">$125</p>
-                            <button class="product__description__add">
-                                Agregar
-                            </button>
-                        </div>
-                    </div>
+                <div id="productsContainer" class="products-container">
+                    <!--Esto se va a rellenar con JS-->
                 </div>
             </main>
         </div>
