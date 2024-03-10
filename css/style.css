@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --color-principal: #462fa1;
-    --color-principal-light: #b19eff;
+    --color-principal: #0250b6;
+    --color-principal-light: #9eb0ff;
     --color-white: #ececec;
     --color-gray: #e2e2e2;
     --color-red: #a01010;
@@ -225,82 +225,6 @@ main {
 .principal-title {
     color: var(--color-principal);
     margin-bottom: 2em;
-}
-
-/*CONTAINER__PRODUCTS*/
-.products-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
-}
-
-/*PRODUCT*/
-.product {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    background-color: #fff;
-    border-radius: 1em;
-    overflow: hidden;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-        rgba(233, 233, 233, 0.8) -6px -2px 16px 0px;
-}
-
-/*PRODUCT__IMG*/
-.product__img {
-    width: 100%;
-    height: 15em;
-    padding: 1em;
-    border-radius: 1em 1em 0 0;
-    object-fit: contain;
-}
-
-/*PRODUCT__DESCRIPCTION*/
-.product__description {
-    display: flex;
-    flex-direction: column;
-
-    height: 8em;
-    background-color: var(--color-principal);
-    padding: 0.5em;
-    border-radius: 0 0 1em 1em;
-    color: var(--color-white);
-}
-
-.product__description__name {
-    font-size: 1em;
-}
-
-.product__description__price {
-    position: absolute;
-    bottom: 135px;
-    font-weight: 500;
-    color: #000;
-    background-color: #00e278b4;
-    border-radius: 5px;
-    padding: 2px 5px;
-}
-
-.product__description__add {
-    position: absolute;
-    bottom: 10px;
-    background-color: var(--color-white);
-    border: 2px solid var(--color-white);
-    border-radius: 0.75em;
-    color: var(--color-principal);
-    padding: 0.3em;
-    width: 94%;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, border 0.2s;
-}
-
-.product__description__add:hover {
-    background-color: #54ff60;
-    color: #000;
-    border: 2px solid #54ff60;
 }
 
 /*CART*/
