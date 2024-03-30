@@ -19,6 +19,11 @@
             referrerpolicy="no-referrer"
         />
         <!--CSS-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
         <link rel="stylesheet" href="../css/normalize.css" />
         <link rel="stylesheet" href="../css/style.css" />
     </head>
@@ -104,69 +109,21 @@
                 <!--Cart-->
                 <div class="cart-container">
                     <!--Cart empty-->
-                    <p class="cart-empty disabled">
+                    <p class="cart-empty disabled" id="carritoVacio">
                         El carrito está vacío.
                         <i class="fa-solid fa-heart-crack"></i>
                     </p>
                     <!--Cart with products-->
-                    <div class="cart-products">
-                        <div class="cart-products__product">
-                            <img
-                                class="cart-products__product__img"
-                                src="../img/products/almacenamiento/SSD/DiscoSolidoInternoKingston500GB.webp"
-                                alt=""
-                            />
-                            <div class="cart-products__product__name">
-                                <small>Nombre</small>
-                                <h3>SSD Kingston 500GB</h3>
-                            </div>
-                            <div class="cart-products__product__quantity">
-                                <small>Cantidad</small>
-                                <p>2</p>
-                            </div>
-                            <div class="cart-products__product__price">
-                                <small>Precio</small>
-                                <p>$75</p>
-                            </div>
-                            <div class="cart-products__product__subtotal">
-                                <small>Subtotal</small>
-                                <p>$150</p>
-                            </div>
-                            <button class="cart-products__product__delete">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </button>
-                        </div>
-                        <div class="cart-products__product">
-                            <img
-                                class="cart-products__product__img"
-                                src="../img/products/memoriaRam/MemoriaKingstonFuryRgb8gbDdr4.webp"
-                                alt=""
-                            />
-                            <div class="cart-products__product__name">
-                                <small>Nombre</small>
-                                <h3>Memoria RAM Kingston 8gb Ddr4</h3>
-                            </div>
-                            <div class="cart-products__product__quantity">
-                                <small>Cantidad</small>
-                                <p>3</p>
-                            </div>
-                            <div class="cart-products__product__price">
-                                <small>Precio</small>
-                                <p>$25</p>
-                            </div>
-                            <div class="cart-products__product__subtotal">
-                                <small>Subtotal</small>
-                                <p>$75</p>
-                            </div>
-                            <button class="cart-products__product__delete">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </button>
-                        </div>
+                    <div class="cart-products disabled" id="carritoProductos">
+                        <!--Esto se va a completar con JS-->
                     </div>
                     <!--Cart actions-->
-                    <div class="cart-actions disabled">
+                    <div class="cart-actions disabled" id="carritoAcciones">
                         <div class="cart-actions__left">
-                            <button class="cart-actions__left__delete-cart">
+                            <button
+                                class="cart-actions__left__delete-cart"
+                                id="carritoAccionesVaciar"
+                            >
                                 Vaciar carrito
                             </button>
                         </div>
@@ -175,19 +132,27 @@
                                 <p>Total:</p>
                                 <p id="total">$225</p>
                             </div>
-                            <button class="cart-actions__right__buy">
+                            <button
+                                class="cart-actions__right__buy"
+                                id="carritoAccionesComprar"
+                            >
                                 Comprar ahora
                             </button>
                         </div>
                     </div>
                     <!--Cart buyed-->
-                    <p class="cart-buyed disabled">
+                    <p class="cart-buyed disabled" id="carritoComprado">
                         Muchas gracias por su compra.
                         <i class="fa-solid fa-heart"></i>
                     </p>
                 </div>
             </main>
         </div>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../js/cart.js"></script>
     </body>
 </html>

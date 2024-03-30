@@ -19,6 +19,7 @@
             referrerpolicy="no-referrer"
         />
         <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
@@ -86,7 +87,7 @@
                                 class="nav-menu__cart button-menu"
                                 href="./pages/cart.html"
                                 ><i class="fa-solid fa-cart-shopping"></i>
-                                Carrito <span class="cart-number">0</span></a
+                                Carrito <span class="cart-number" id="cartNumber">0</span></a
                             >
                         </li>
                     </ul>
@@ -128,13 +129,14 @@
             </aside>
             <!--Main-->
             <main>
-                <h2 class="principal-title">Todos los productos</h2>
+                <h2 class="principal-title" id="tituloPrincipal">Todos los productos</h2>
                 <!--Products-->
                 <div id="productsContainer" class="products-container">
                     <!--Esto se va a rellenar con JS-->
                 </div>
             </main>
         </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="./js/app.js"></script>
     </body>
 </html>

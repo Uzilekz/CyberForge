@@ -1,87 +1,136 @@
-// Definición de productos y precios
-const productos = [
-    { nombre: "Procesador", precio: 50000 },
-    { nombre: "Tarjeta Gráfica", precio: 100000 },
-    { nombre: "Memoria RAM", precio: 20000 },
-    { nombre: "Disco Duro", precio: 15000 },
-];
+let productos = [];
 
-// Array para almacenar los productos seleccionados durante la compra
-const carrito = [];
-
-// Función para mostrar la lista de productos disponibles
-function mostrarProductos() {
-    let listaProductos = "Ingrese el número del producto que desea comprar: \n";
-    productos.forEach(({ nombre, precio }, index) => {
-        listaProductos += `${index + 1}. ${nombre} - $${precio}\n`;
+fetch("../js/products.json")
+    .then((response) => response.json())
+    .then((data) => {
+        productos = data;
+        cargarProductos(productos);
     });
-    return listaProductos;
+
+const contenedorProductos = document.querySelector("#productsContainer");
+const botonesCategorias = document.querySelectorAll(".nav-menu__button");
+const tituloPrincipal = document.querySelector("#tituloPrincipal");
+let botonesAgregar = document.querySelectorAll(".product__description__add");
+const numeroCarrito = document.querySelector("#cartNumber");
+
+//Cargar productos en el HTML
+function cargarProductos(productosElegidos) {
+    contenedorProductos.innerHTML = "";
+    //Busca en la lista de objetos(productos), por cada "producto"(variable que se le da a cada uno de los objetos), crea un div para cada uno de ellos con la información siguiente.
+    productosElegidos.forEach((producto) => {
+        const div = document.createElement("div");
+        div.classList.add("product");
+        div.innerHTML = `
+        <img class="product__img" src="${producto.imagen}" alt="${producto.titulo}" />
+        <div class="product__description">
+            <h3 class="product__description__name">${producto.titulo}</h3>
+            <p class="product__description__price">$${producto.precio}</p>
+            <button class="product__description__add" id="${producto.id}">Agregar</button>
+        </div>
+        `;
+
+        contenedorProductos.append(div);
+    });
+
+    actualizarBotonesAgregar();
 }
 
-// Función para realizar una compra
-function comprar() {
-    const opcion = parseInt(prompt(mostrarProductos())) || 0;
-    const opcionValida = opcion >= 1 && opcion <= productos.length;
+//Cambiar entre categorias de productos
+// Convertir NodeList a Array usando Array.from()
+Array.from(botonesCategorias).forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+        // Remover la clase "active" de todos los botones
+        botonesCategorias.forEach((boton) => {
+            boton.classList.remove("active");
+        });
 
-    if (opcionValida) {
-        const cantidad =
-            parseInt(prompt("Ingrese la cantidad que desea comprar:")) || 0;
-        const cantidadValida = cantidad > 0;
+        // Agregar la clase "active" solo al botón clickeado
+        e.currentTarget.classList.add("active");
 
-        if (cantidadValida) {
-            const productoSeleccionado = productos[opcion - 1];
-            const total = productoSeleccionado.precio * cantidad;
-
-            // Utilizando spread para agregar el producto al carrito
-            carrito.push({ ...productoSeleccionado, cantidad, total });
-
-            alert(
-                `Has agregado ${cantidad} ${productoSeleccionado.nombre} al carrito. Total: $${total}`
+        // Cambiar nombre del titulo principal
+        if (e.currentTarget.id != "todos") {
+            const productoCategoria = productos.find(
+                (producto) => producto.categoria.id === e.currentTarget.id
             );
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            const productosBoton = productos.filter(
+                (producto) => producto.categoria.id === e.currentTarget.id
+            );
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            cargarProductos(productosBoton);
         } else {
-            alert("La cantidad ingresada no es válida.");
+            tituloPrincipal.innerText = "Todos los productos";
+            cargarProductos(productos);
         }
-    } else {
-        alert(
-            "Opción no válida. Por favor, ingrese un número de producto válido."
-        );
-    }
-}
-
-// Función para mostrar los productos en el carrito
-function mostrarCarrito() {
-    let mensaje = "Productos en tu carrito:\n";
-    carrito.forEach(({ nombre, cantidad, total }) => {
-        mensaje += `${cantidad} ${nombre} - Total: $${total}\n`;
     });
-    return mensaje;
+});
+
+function actualizarBotonesAgregar() {
+    botonesAgregar = document.querySelectorAll(".product__description__add");
+
+    botonesAgregar.forEach((boton) => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
 }
 
-// Bienvenida a la tienda
-const nombreUsuario = prompt("Ingrese su nombre:");
+let productosEnCarrito;
 
-if (nombreUsuario) {
-    alert(`¡Hola ${nombreUsuario}! Bienvenido a 'CyberForge'.`);
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
-    // Permitir al usuario comprar productos múltiples
-    let deseaComprarOtro = true;
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumeroCarrito();
+} else {
+    productosEnCarrito = [];
+}
 
-    while (deseaComprarOtro) {
-        // Ofrecer la opción de comprar
-        const deseaComprar = confirm;
+function agregarAlCarrito(e) {
+    Toastify({
+        text: "AGREGADO AL CARRITO",
+        duration: 2500,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #b19eff, #462fa1)",
+            borderRadius: "1.25em",
+            fontSize: "0.85em",
+        },
+        offset: {
+            x: "1em", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: "1em", // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function () {}, // Callback after click
+    }).showToast();
 
-        if (deseaComprar) {
-            comprar();
-            deseaComprarOtro = confirm("¿Desea seguir comprando?");
-        } else {
-            deseaComprarOtro = false;
-        }
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(
+        (producto) => producto.id === idBoton
+    );
+
+    if (productosEnCarrito.some((producto) => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(
+            (producto) => producto.id === idBoton
+        );
+        productosEnCarrito[index].cantidad++;
+    } else {
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
     }
 
-    // Si el carrito no está vacío, mostrar el carrito y despedirse
-    if (carrito.length > 0) {
-        alert(mostrarCarrito());
-    }
+    actualizarNumeroCarrito();
 
-    alert("Gracias por visitar 'CyberForge'.");
+    localStorage.setItem(
+        "productos-en-carrito",
+        JSON.stringify(productosEnCarrito)
+    );
+}
+
+function actualizarNumeroCarrito() {
+    let nuevoNumeroCarrito = productosEnCarrito.reduce(
+        (acc, producto) => acc + producto.cantidad,
+        0
+    );
+    numeroCarrito.innerText = nuevoNumeroCarrito;
 }
